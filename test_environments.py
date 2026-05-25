@@ -1,4 +1,4 @@
-import gym
+import gymnasium as gym
 import sconegym
 
 def gym_test(environment_name):
@@ -29,6 +29,6 @@ def gym_test(environment_name):
     env.close()
 
 # evaluate all environments in gym
-env_names = [env_spec.id for env_spec in gym.envs.registry.all() if env_spec.id.startswith('scone')]
+env_names = [env_id for env_id in gym.envs.registry.keys() if env_id.startswith('scone')]
 for env_name in env_names:
     gym_test(env_name)

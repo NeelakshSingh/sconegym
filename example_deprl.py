@@ -1,4 +1,5 @@
-import gym, deprl
+import deprl
+import gymnasium as gym
 import sconegym
 
 # create the sconegym env
